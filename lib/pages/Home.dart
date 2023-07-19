@@ -2,22 +2,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget{
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState()=> _HomeState();
-  }
+  _HomeState createState() => _HomeState();
+}
 
-  class _HomeState extends State<Home>{
-
+class _HomeState extends State<Home> {
   late String _userToDo;
   List todoList = [];
 
   @override
   void initState() {
     super.initState();
-    todoList.addAll(['Milk','laslf','pfdjf']);
+    todoList.addAll(['Milk', 'laslf', 'pfdjf']);
   }
 
   @override
@@ -44,8 +43,7 @@ class Home extends StatefulWidget{
                       onPressed: () {
                       setState((){
                         todoList.removeAt(index);
-                      });
-                      },
+                      });},
                   ),
                 ),
               ),
@@ -54,10 +52,9 @@ class Home extends StatefulWidget{
                   todoList.removeAt(index);
 
                 });
-          }
-          );
-          }
-      ),
+              });
+        }
+        ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.greenAccent,
         onPressed: (){
